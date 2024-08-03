@@ -1,0 +1,1 @@
+# sagt Python dass app ein Modul ist, und kein normales Directory
