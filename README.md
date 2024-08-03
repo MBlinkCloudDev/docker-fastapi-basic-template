@@ -26,10 +26,10 @@ Please enable the Virtual Machine Platform Windows feature and ensure virtualiza
 
 ### 2) in VS Code:
 - gehe in richtigen Ordner mit dem Dockerfile
-docker login <Container-registry-Login-server> -u <Container-registry-Username> -p <Container-registry-password>
-docker build -t registry4docker.azurecr.io/basic-api01:build-tag-1 .
-docker push registry4docker.azurecr.io/basic-api01:build-tag-1
+$ docker login <Container-registry-Login-server> -u <Container-registry-Username> -p <Container-registry-password>
+$ docker build -t registry4docker.azurecr.io/basic-api01:build-tag-1 .
+$ docker push registry4docker.azurecr.io/basic-api01:build-tag-1
 
 ### 3) now create an azure Instance
-	-> Image Source: Azure Contaier Registry
-	(darin kannst du auch ports auswählen, unter welchem man die App erreichen kann) --> zb 80 oder 5000 (falls in Dockerfile folgendes steht: CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000"])
+- Image Source: Azure Contaier Registry
+- darin kannst du auch ports auswählen, unter welchem man die App erreichen kann) --> zb 80 oder 5000 (falls in Dockerfile folgendes steht: CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000"]
