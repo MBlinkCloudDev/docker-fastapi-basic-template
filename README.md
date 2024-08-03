@@ -18,3 +18,18 @@ $ docker run -p 3000:5000 basic-api01
 Further knowledge:
 Docker Desktop offers security advices, and compares image to a bunch of databases with security advices.
 Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.
+
+
+# Deploy on Azure
+
+### 1) erstelle Azure Container Registry "registry4docker"
+
+### 2) in VS Code:
+- gehe in richtigen Ordner mit dem Dockerfile
+docker login <Container-registry-Login-server> -u <Container-registry-Username> -p <Container-registry-password>
+docker build -t registry4docker.azurecr.io/basic-api01:build-tag-1 .
+docker push registry4docker.azurecr.io/basic-api01:build-tag-1
+
+### 3) now create an azure Instance
+	-> Image Source: Azure Contaier Registry
+	(darin kannst du auch ports auswählen, unter welchem man die App erreichen kann) --> zb 80 oder 5000 (falls in Dockerfile folgendes steht: CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000"])
