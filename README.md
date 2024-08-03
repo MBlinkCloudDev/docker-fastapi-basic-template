@@ -7,17 +7,14 @@ Docker Components:
 
 
 fastapi in docker:
-
-$ docker build -t basic-api01 .
-
-$ docker run -p 3000:5000 basic-api01
-
--> FastAPI is on docker accessible on http://127.0.0.1:3000/
+- $ docker build -t basic-api01 .
+- $ docker run -p 3000:5000 basic-api01
+- FastAPI is on docker accessible on http://127.0.0.1:3000/
 
 
 Further knowledge:
-Docker Desktop offers security advices, and compares image to a bunch of databases with security advices.
-Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.
+- Docker Desktop offers security advices, and compares image to a bunch of databases with security advices.
+- Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.
 
 
 # Deploy on Azure
@@ -26,9 +23,9 @@ Please enable the Virtual Machine Platform Windows feature and ensure virtualiza
 
 ### 2) in VS Code:
 - gehe in richtigen Ordner mit dem Dockerfile
-$ docker login <Container-registry-Login-server> -u <Container-registry-Username> -p <Container-registry-password>
-$ docker build -t registry4docker.azurecr.io/basic-api01:build-tag-1 .
-$ docker push registry4docker.azurecr.io/basic-api01:build-tag-1
+- $ docker login <Container-registry-Login-server> -u <Container-registry-Username> -p <Container-registry-password>
+- $ docker build -t registry4docker.azurecr.io/basic-api01:build-tag-1 .
+- $ docker push registry4docker.azurecr.io/basic-api01:build-tag-1
 
 ### 3) now create an azure Instance
 - Image Source: Azure Contaier Registry
