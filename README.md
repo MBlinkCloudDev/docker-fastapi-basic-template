@@ -7,8 +7,11 @@ Docker Components:
 
 
 fastapi in docker:
+
 $ docker build -t basic-api01 .
+
 $ docker run -p 3000:5000 basic-api01
+
 -> FastAPI is on docker accessible on http://127.0.0.1:3000/
 
 
