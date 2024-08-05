@@ -23,7 +23,7 @@ Further knowledge:
 
 ### 2) in VS Code:
 - go to the right folder with the Dockerfile inside
-- $ docker login "<Container-registry-Login-server>" -u "<Container-registry-Username>" -p "<Container-registry-password>"
+- $ docker login "Container-registry-Login-server" -u "Container-registry-Username" -p "Container-registry-password"
 - $ docker build -t registry4docker.azurecr.io/basic-api01:build-tag-1 .
 - $ docker push registry4docker.azurecr.io/basic-api01:build-tag-1
 
