@@ -19,14 +19,15 @@ Further knowledge:
 
 # Deploy on Azure
 
-### 1) erstelle Azure Container Registry "registry4docker"
+### 1) create an Azure Container Registry "registry4docker"
 
 ### 2) in VS Code:
-- gehe in richtigen Ordner mit dem Dockerfile
+- go to the right folder with the Dockerfile inside
 - $ docker login <Container-registry-Login-server> -u <Container-registry-Username> -p <Container-registry-password>
 - $ docker build -t registry4docker.azurecr.io/basic-api01:build-tag-1 .
 - $ docker push registry4docker.azurecr.io/basic-api01:build-tag-1
 
-### 3) now create an azure Instance
+### 3) now create an Azure Container Instance
 - Image Source: Azure Contaier Registry
 - darin kannst du auch ports auswählen, unter welchem man die App erreichen kann) --> zb 80 oder 5000 (falls in Dockerfile folgendes steht: CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000"]
+(Ports nur eröffnen, wenn zb in uvicorn command was anderes steht als standard-port 80)
