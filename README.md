@@ -1,5 +1,8 @@
 # docker-fastapi-basic-template
 
+--> see: https://github.com/MBlinkCloudDev/docker-basic-template  
+
+
 Docker Components:
 1. Dockerfile - is just code instructions how to build image
 2. Image      - is blueprint to tell the environment how to run your application
