@@ -9,12 +9,12 @@ WORKDIR /fastapi
 
 # Copy the dependencies file to the working directory
 COPY ./requirements.txt /fastapi/requirements.txt
-COPY ./app /fastapi/app
 
 # Install any dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the content of the local src directory to the working directory
+COPY ./app /fastapi/app
 #COPY . .
 
 #EXPOSE 8000
